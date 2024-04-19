@@ -9,6 +9,7 @@ const repoSchema = new Schema(
 			unique: true,
 		},
 		title: {
+			type: String,
 			required: true,
 			unique: true,
 		},
@@ -30,17 +31,19 @@ const repoSchema = new Schema(
 			required: true,
 			match: [/[regex]/, "Must enter a valid URL"],
 		},
-		topics: {}, // TODO: create array type?
-		activity: {}, // TODO: is this an array type? A separate model with its own information?
-		languages: {}, // TODO: create array type?
-		forkStatus: { type: Boolean, default: false },
+		//topics: {}, // TODO: create array type?
+		//activity: {}, // TODO: is this an array type? A separate model with its own information?
+		//languages: {}, // TODO: create array type?
+		forkStatus: {
+			type: Boolean,
+			default: false,
+		},
 	},
 	{
 		toJSON: {
 			virtuals: true,
 			getters: true,
 		},
-		id: false,
 	}
 );
 
