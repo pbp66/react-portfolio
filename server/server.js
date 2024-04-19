@@ -40,7 +40,7 @@ app.get(process.env.URI_PATH || "/", (req, res) => {
 });
 
 // TODO: relocate function to separate file and location
-function updateRepos() {
+function updateRepoData() {
 	const GithubAPI = new GithubAPI(process.env.GITHUB_USER);
 	// TODO: Determine how to use the below methods to update the database
 	//GithubAPI.getRepos();
@@ -48,7 +48,7 @@ function updateRepos() {
 	//GithubAPI.getTags();
 }
 
-//setInterval(updateRepos, 1000*60*60*24); // Run every day
+//setInterval(updateRepoData, 1000*60*60*24); // Run every day
 
 const startApolloServer = () => {
 	db.once("open", async () => {
