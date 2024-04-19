@@ -26,3 +26,5 @@ class GithubRepo {
 		return this.summary;
 	}
 }
+
+module.exports = { GithubRepo: GithubRepo };
