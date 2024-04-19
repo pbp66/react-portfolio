@@ -26,8 +26,9 @@ export default function Navigation(props) {
 							<NavbarLink to="/Resume">Resume</NavbarLink>
 							<NavbarLink to="/contactMe">Contact Me</NavbarLink>
 							<NavbarLink to="/aboutMe">About Me</NavbarLink>
-							<NavbarLink to="/blog">Blog</NavbarLink>
-							<NavbarLink to="/vault">Vault</NavbarLink>
+							{/* //TODO: Uncomment the Blog and Vault sections once the primary tabs are complete and these can be implemented */}
+							{/* <NavbarLink to="/blog">Blog</NavbarLink> */}
+							{/* <NavbarLink to="/vault">Vault</NavbarLink> */}
 						</Nav>
 					</Navbar.Collapse>
 				</div>
