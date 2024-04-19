@@ -9,7 +9,7 @@ const typeDefs = require("./graphql/graphql.js");
 const { resolvers } = require("./controllers/index.js");
 const { authMiddleware } = require("./utils/auth.js");
 const routes = require("./routes/routes.js");
-const { GithubAPI } = require("./lib/GithubApi.js");
+const updateRepoData = require("./utils/updateRepoData.js");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -39,15 +39,7 @@ app.get(process.env.URI_PATH || "/", (req, res) => {
 	});
 });
 
-// TODO: relocate function to separate file and location
-function updateRepoData() {
-	const GithubAPI = new GithubAPI(process.env.GITHUB_USER);
-	// TODO: Determine how to use the below methods to update the database
-	//GithubAPI.getRepos();
-	//GithubAPI.getRepoActivity();
-	//GithubAPI.getTags();
-}
-
+// TODO: enable once updateRepoData is complete
 //setInterval(updateRepoData, 1000*60*60*24); // Run every day
 
 const startApolloServer = () => {
