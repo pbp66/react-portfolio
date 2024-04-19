@@ -48,7 +48,7 @@ function updateRepos() {
 	//GithubAPI.getTags();
 }
 
-//setInterval(updateRepos, 86400); // Run every day
+//setInterval(updateRepos, 1000*60*60*24); // Run every day
 
 const startApolloServer = () => {
 	db.once("open", async () => {
