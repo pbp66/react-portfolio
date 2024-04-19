@@ -25,6 +25,11 @@ class GithubAPI extends API {
 		this.url.pathname = `repos/${this.user}/${repo}/activity`;
 		return await this.fetch();
 	}
+
+	async getTags(repo) {
+		this.url.pathname = `/repos/${this.user}/${repo}/tags`;
+		return await this.fetch();
+	}
 }
 
 module.exports = { GithubAPI: GithubAPI };
