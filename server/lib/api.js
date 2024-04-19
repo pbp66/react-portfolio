@@ -21,7 +21,9 @@ class API {
 	}
 
 	async fetch() {
-		return (await axios.get(this.url)).data;
+		const data = (await axios.get(this.url)).data;
+		this.resetURL();
+		return data;
 	}
 
 	setSearchParameters(parameterObject) {
